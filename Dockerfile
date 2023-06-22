@@ -26,7 +26,6 @@ RUN rm -rf /opt/dist/usr/local/share/doc
 RUN rm -rf /opt/dist/usr/local/share/man
 
 FROM ubuntu:22.04
-COPY third-party-programs.txt /
 RUN apt-get update && apt-get upgrade -y && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     curl ca-certificates gpg-agent software-properties-common && \
